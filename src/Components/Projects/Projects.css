@@ -1,0 +1,38 @@
+.project-main{
+    background-color: #413F3D;
+    color: #F2F1EF; 
+    margin-top: 10px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.project-title{
+    margin-top: 0;
+    margin-left: 34px;
+    padding-top: 17px;
+    
+}
+
+.project-title-hr{
+    width: 5%;
+    margin-left: 34px;
+    height: 0.5vh;
+    background-color:#0066FF;
+}
+
+.project-images{
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: auto auto auto ;
+    grid-auto-rows: 400px ;
+    margin-top: 80px;
+    margin-left: 78px; 
+}
+
+.project-images-img img{
+    width: 24vw;
+    height: 30vh;
+}
+
+
+
