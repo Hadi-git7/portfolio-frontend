@@ -66,6 +66,7 @@ width: 100%;
 
     .About-h1{
        text-align: center;
+       
     }
     .About-title-hr{
         width:20%;
@@ -115,5 +116,8 @@ width: 100%;
        align-items: center;
     }
    
+    .About-main{
+        margin-top: 200px;
+    }
 }
 

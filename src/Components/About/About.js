@@ -11,6 +11,7 @@ function About() {
       const res = await response.data;
       console.log(res)
       setAbout(res)
+     
     }catch(err){
       console.log(err)
     }
@@ -24,11 +25,11 @@ function About() {
     <>
     <div className='About-main' id='about'>
       <div className='About-content'>
-          <div className='About-image'><img src={`http://localhost:5000/${about[0]?.image}`} /></div>
+          <div className='About-image'><img src={`http://localhost:5000/${about[0]?.image}`} alt='title'/></div>
 
           <div className='About-text'>
           <h1 className='About-h1'>About</h1>
-          <img className='hide-show' src={`http://localhost:5000/${about[0]?.image}`} />
+          <img className='hide-show' src={`http://localhost:5000/${about[0]?.image}`}  alt='title' />
           <div className='wrep'>
             <h3 className='About-h3'>{about[0]?.title}</h3>
             <p className='About-p'>{about[0]?.text}</p>
