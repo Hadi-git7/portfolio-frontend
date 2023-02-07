@@ -1,15 +1,16 @@
 .About-main{
    width: 75%;
    margin: 0 auto;
+   margin-top: 100px;
 }
 
 .About-h1{
     color: #001E6C;
     font-size: 50px;
-    margin: 0;
-    position: absolute;
-    margin-top: -100px;
+    margin: 0 auto;
+    width: fit-content;
     border-bottom: 5px solid #0066FF;
+    
 }
 
 
@@ -39,7 +40,7 @@
     display: flex;
     margin: 3vh 0;
     gap: 30px;
-    margin-top: 190px;
+    margin-top: 100px;
     justify-content: center;
 }
 
@@ -80,7 +81,7 @@ width: 100%;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 40vh 40vh 40vh;
-        margin-top: 30px;
+        margin-top: 0px;
     }
 
     .About-image {
@@ -109,15 +110,14 @@ width: 100%;
     }
 
     .About-text{
-       padding-top: 9vh;
        gap: 80px;
-       margin: 4vh 2vh 0 2vh;
+       margin: 0vh 2vh 0 2vh;
        align-self: center;
        align-items: center;
     }
    
     .About-main{
-        margin-top: 200px;
+        margin-top: 50px;
     }
 }
 

@@ -15,7 +15,7 @@ function Navbar() {
 			<nav ref={navRef}>
 				<a href="#home" onClick={showNavbar}>Home</a>
 				<a href="#about" onClick={showNavbar}>About</a>
-				<a href="/#projects" onClick={showNavbar}>Projects</a>
+				<a href="#projects" onClick={showNavbar}>Projects</a>
 				<a href="#services" onClick={showNavbar}>Services</a>
         		<a href="/#contact" onClick={showNavbar}>Contact</a>
 				<button

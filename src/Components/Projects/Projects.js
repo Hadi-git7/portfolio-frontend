@@ -10,9 +10,14 @@ function Projects() {
   
   const [projects, setProjects] = useState([]);
   const [visible, setVisible] = useState(3);
+  const [clicked,setclicked]= useState(false)
 
   const showMoreItems = () => {
-    setVisible((prevValue) => prevValue + 3);
+    if(!clicked){
+    setVisible((prevValue) => prevValue + projects.length);
+    }else{
+      setVisible((prevValue) => prevValue - projects.length);
+    }
   }
 
 useEffect(() => {
@@ -32,11 +37,10 @@ useEffect(() => {
 
   return (
     <>
-      <div className='project-main'>
+      <div className='project-main' id='projects'>
 
         <h1 className='project-title'>Projects</h1>
 
-        <hr className='project-title-hr' />
 
         <div className='project-images'>
 
@@ -53,7 +57,7 @@ useEffect(() => {
             <span> {project.title}</span>
             </div>
             
-           <hr className='hr'/>
+          
            </div>
            </div>
           ))
@@ -62,7 +66,8 @@ useEffect(() => {
         </div>
         
         <div className='show_button'>
-          <button onClick={showMoreItems}>Show More</button> 
+          <button onClick={()=>{showMoreItems();setclicked(!clicked);console.log(visible)}}>
+           {!clicked ? "Show More" : "Show Less"}</button> 
         </div>
       </div>
        

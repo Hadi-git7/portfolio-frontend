@@ -23,12 +23,13 @@ function About() {
 
   return (
     <>
-    <div className='About-main' id='about'>
+    <div className='About-main' >
+    <h1 className='About-h1'id='about'>About</h1>
+
       <div className='About-content'>
           <div className='About-image'><img src={`http://localhost:5000/${about[0]?.image}`} alt='title'/></div>
 
           <div className='About-text'>
-          <h1 className='About-h1'>About</h1>
           <img className='hide-show' src={`http://localhost:5000/${about[0]?.image}`}  alt='title' />
           <div className='wrep'>
             <h3 className='About-h3'>{about[0]?.title}</h3>

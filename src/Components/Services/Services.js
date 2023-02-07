@@ -1,4 +1,3 @@
-import React, { useRef } from 'react'
 import {useState,useEffect} from 'react'
 import '../Services/Services.css'
 import Axios from 'axios'
@@ -13,7 +12,6 @@ import "swiper/css/pagination";
 
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
-import { logRoles } from '@testing-library/react';
 
 function Services() {
   const [Service, setService] = useState([])
