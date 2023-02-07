@@ -36,7 +36,7 @@
 } 
 
 
- button{
+ .show_button button{
     margin-left: 830px;
     margin-bottom: 10px; 
     min-width: 200px;
@@ -93,7 +93,7 @@
     text-align: center; 
   }
 
-  span{
+  .link span{
     font-weight: 500;
     position: absolute;
     writing-mode: vertical-rl;
@@ -110,7 +110,7 @@
     text-align: center;
 }
 
-  a{
+ .link a{
     text-decoration: none;
   }
 
@@ -157,7 +157,7 @@
         transition: .3s ease;
       }
 
-      button{
+      .show_button button{
         margin-left: 313px;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -173,7 +173,7 @@
 
 @media screen and (max-width: 1200px) and (orientation: landscape){
 
-    button{
+    .show_button button{
         margin-left: 480px;
         margin-top: 12px;
         margin-bottom: 10px;
@@ -231,7 +231,7 @@
         text-align: center;
     }
 
-    button{
+    .show_button button{
         margin-left: 100px;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -272,7 +272,7 @@
         text-align: center;
     }
 
-    button{
+    .show_button button{
         margin-left: 280px;
         margin-top: 10px;
         margin-bottom: 10px;

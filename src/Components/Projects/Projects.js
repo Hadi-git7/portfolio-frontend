@@ -18,7 +18,7 @@ function Projects() {
 useEffect(() => {
   const fetchProjects = async () => {
     try{
-      const response = await axios.get('http://localhost:5000/api/project');
+      const response = await axios.get('/api/project');
       const result = await response.data;
       setProjects(result)
     }catch(err){
@@ -32,7 +32,6 @@ useEffect(() => {
 
   return (
     <>
-    
       <div className='project-main'>
 
         <h1 className='project-title'>Projects</h1>
@@ -49,8 +48,11 @@ useEffect(() => {
             <img src= {project.image} alt={project.title} className='image'/>
             <div className='overlay'>
               {/**put in the decription section the link of website that you want to show  */}
+            <div className='link'>
             <a href={ project.description} target='_blank' rel='noreferrer' className='text'>{ project.description}</a>
             <span> {project.title}</span>
+            </div>
+            
            <hr className='hr'/>
            </div>
            </div>
@@ -59,9 +61,9 @@ useEffect(() => {
 
         </div>
         
-        
-        <button onClick={showMoreItems}>Show More</button> 
-       
+        <div className='show_button'>
+          <button onClick={showMoreItems}>Show More</button> 
+        </div>
       </div>
        
 
