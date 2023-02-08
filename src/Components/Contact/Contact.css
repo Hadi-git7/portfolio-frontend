@@ -46,13 +46,14 @@
   background-color: black;
   margin-inline-end: auto;
   padding-bottom: 0;
+  overflow: unset;
 }
 
 .contact {
   padding: 4rem;
   background-color: black;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding-right: 11vw;
   left: 4vw;
   top: 2vw;
@@ -207,7 +208,6 @@ form button {
   }
 }
 
-
 @media screen and (max-width: 990px) {
   .container .socials-media {
     padding-bottom: 5vw;
@@ -218,7 +218,7 @@ form button {
     display: block;
   }
 }
-  
+
 @media screen and (max-width: 768px) {
   .container {
     max-width: 540px;
