@@ -141,9 +141,6 @@
         aspect-ratio: auto 1 / 1;
         height: auto;
     }  
-    
-
-   
 
     .overlay {
         position: absolute;
@@ -187,7 +184,7 @@
     }  
 
     .project-images-img img{
-         min-width: 350px;
+         min-width: 330px;
          margin-top: 15px;
         aspect-ratio: auto 1 / 1;
         
@@ -212,9 +209,6 @@
         transition: .3s ease;
       }
 
-   
-   
-    
 } 
 
 
