@@ -25,7 +25,7 @@ function Navbar() {
         <a href="#services" onClick={showNavbar}>
           Services
         </a>
-        <a href="/#contact" onClick={showNavbar}>
+        <a href="#contact" onClick={showNavbar}>
           Contact
         </a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>

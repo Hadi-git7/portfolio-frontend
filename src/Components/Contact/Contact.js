@@ -28,7 +28,7 @@ function Contact() {
   };
 
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <div className="whatsapp-btn-container">
         <a className="whatsapp-btn" href="https://wa.me/9619999999">
           <i class="fa-brands fa-whatsapp"></i>
@@ -39,12 +39,9 @@ function Contact() {
       <div className="cont-contact">
         <div className="contact-heading">
           <h2> Contact </h2>
-          <hr />
+         
           <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
+            Contact us for more information
           </p>
         </div>
         <div className="container">

@@ -17,7 +17,7 @@
     color: white;
     margin-top: 100px;
     padding : 10px;
-    height: 350px;
+    height: 380px;
 
 
   }
@@ -35,6 +35,10 @@
     margin: 0 auto;
     text-align: center;
     width: fit-content;
+    }
+
+    .Service-p{
+      margin-top: 20px;
     }
 
     @media(max-width:1000px){
