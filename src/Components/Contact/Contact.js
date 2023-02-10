@@ -13,10 +13,10 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "service_dadkqng",
-        "template_r4zn1kk",
-        form.current,
-        "JA2E7_Jd532oOh-Ue"
+        "service_4cbd9gb",
+        "template_sj88xly",
+        e.target,
+        "kpuzN6_Mcnfkpouoj"
       )
       .then(
         (result) => {
@@ -86,14 +86,14 @@ function Contact() {
           </div>
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
-              <input type="text" placeholder="Name" name="user_name" required />
+              <input type="text" placeholder="Name" name="name_from" required />
               <input
                 type="email"
                 placeholder="E-mail"
-                name="user_email"
+                name="email_from"
                 required
               />
-              <input type="text" placeholder="Subject" required />
+              <input type="text" placeholder="Subject" required name="subject" />
               <textarea
                 placeholder="Message"
                 name="message"
