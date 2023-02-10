@@ -32,7 +32,7 @@ function Contact() {
   useEffect(() => {
     const fetchContact = async () => {
       try {
-        const response = await axios.post("/api/contact");
+        const response = await axios.get("/api/contact");
         const result = await response.data;
         setContact(result);
         console.log(result);
@@ -46,7 +46,7 @@ function Contact() {
   return (
     <div className="contact" id="contact">
       <div className="whatsapp-btn-container">
-        <a className="whatsapp-btn" href="https://wa.me/96170115970">
+        <a className="whatsapp-btn" href={Contact[0]?.whatsapp}>
           <i class="fa-brands fa-whatsapp"></i>
         </a>
         <span>Contact Us</span>
@@ -62,14 +62,14 @@ function Contact() {
           <div className="socials-media">
             <div className="socials-icons icon">
               <i class="fa-sharp fa-solid fa-location-dot"></i>
-              <a href="https://goo.gl/maps/rtw8C5EEV7N6pJsz7">
+              <a href={Contact[0]?.adress}>
                 <h5>Adress</h5>
               </a>
             </div>
 
             <div className="socials-icons icon">
               <i class="fa-solid fa-envelope"></i>
-              <a href="https://mail.google.com/">
+              <a href={Contact[0]?.email}>
                 <h5>E-mail</h5>
               </a>
             </div>
@@ -79,7 +79,7 @@ function Contact() {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://www.linkedin.com/in/sahar-chatah/">
+                href={Contact[0]?.linkedin}>
                 <h5>linkedin</h5>
               </a>
             </div>
