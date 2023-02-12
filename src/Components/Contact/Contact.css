@@ -16,7 +16,7 @@
   }
 }
 .whatsapp-btn-container .whatsapp-btn {
-  font-size:4rem;
+  font-size: 4rem;
   color: #25d366;
   display: inline-block;
   transition: all 400ms;
@@ -43,10 +43,17 @@
   opacity: 1;
 }
 
+* {
+  background-color: black;
+  margin-inline-end: auto;
+  padding-bottom: 0;
+}
+
 .contact {
   padding: 4rem;
   background-color: black;
   position: relative;
+  overflow: hidden;
   padding-right: 11vw;
   top: 2vw;
   width: 100%;
@@ -85,7 +92,7 @@
   font-size: 50px;
   line-height: 48px;
   margin: 0 auto;
-  border-bottom: 5px solid #0066FF;
+  border-bottom: 5px solid #0066ff;
 }
 
 .contact-heading p {
@@ -99,7 +106,6 @@
   /* padding-right: 80px; */
   text-align: center;
 }
-
 
 .container {
   display: flex;
@@ -152,7 +158,6 @@ form {
   padding-right: 9vw;
   height: 100%;
   left: 10vw;
- 
 }
 
 form input {
@@ -167,9 +172,9 @@ form input {
   transition: all, 0.3s;
 }
 
-::placeholder { 
+::placeholder {
   color: white;
-  opacity: 1; 
+  opacity: 1;
 }
 
 form textarea {
@@ -208,31 +213,27 @@ form button {
   }
 }
 
-
 @media screen and (max-width: 990px) {
   .container .socials-media {
     padding-bottom: 5vw;
   }
 
+  form {
+    color: gray;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0;
+    margin-right: 0vw;
+    margin-left: 0rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2vw;
+    padding-right: 0vw;
 
+    left: 10vw;
+  }
 
-form {
-  color: gray;
-  display: block;
-  margin: 0 auto;
-  margin-top: 0;
-  margin-right: 0vw;
-  margin-left: 0rem;
-  justify-content: center;
-  align-items: center;
-  padding-top: 2vw;
-  padding-right: 0vw;
-
-  left: 10vw;
- 
-}
-
-  .socials-media{
+  .socials-media {
     margin: 0 auto;
     padding-left: 0;
     align-items: center;
@@ -282,4 +283,3 @@ form {
     width: 60px;
   }
 }
-
