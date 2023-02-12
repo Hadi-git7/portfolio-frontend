@@ -16,8 +16,8 @@ import { EffectCoverflow, Pagination } from "swiper";
 function ServicesDash() {
   const [Service, setService] = useState([]);
   const [openDivPost,setdivPost]=useState(false);
-  const [Title,setTitle]=useState('');
-  const [Description,setDescription]=useState('');
+  const [Title,setTitle]=useState(null);
+  const [Description,setDescription]=useState(null);
 
   const Request = async () => {
     try {
@@ -33,10 +33,12 @@ function ServicesDash() {
     Request();
   }, []);
 
-  const PostService =async ()=>{
-    const form = new FormData();
-    form.append("title",Title);
-    form.append("description",Description)
+  const PostService = async () => {
+    const form = {
+      "title":Title,
+      "description":Description
+    }
+
     try{
     const res = await Axios.post(`http://localhost:5000/api/services`,form, 
     {
@@ -68,7 +70,7 @@ function ServicesDash() {
     const response =await res.data;
     console.log(response);
     Request();
-    setdivPost(false);
+    setdivPost(!openDivPost);
 
 }catch(err){
     console.log(err);
@@ -79,20 +81,24 @@ function ServicesDash() {
     <>
       <div className="Service-main-dash">
         <h1 className="Service-h1-dash">Services</h1>
-        <button className="Create-service-button" onClick={()=>setdivPost(true)}>Create new Service</button>
+        <button className="Create-service-button" onClick={()=>setdivPost(!openDivPost)}>Create new Service</button>
         {openDivPost &&
     <div>
-      <label htmlFor='Service-title'>Please provide Service title
+      <label className="Service-labell" htmlFor='Service-title'>Please provide Service title
       <br />
         <input className="Service-title-input" type="text" onChange={(e)=>{setTitle(e.target.value)}}/>
         </label>
         <br />
-        <label  htmlFor='Service-description'>Please provide Service description
+        <label className="Service-labell" htmlFor='Service-description'>Please provide Service description
         <br />
         <input className="Service-description-input" type="text" onChange={(e)=>{setDescription(e.target.value)}}/>
         </label>
         <br />
-        <button className="Service-submit-button" onClick={()=>PostService()}>Submit</button>
+        <button className="Service-submit-button" onClick={()=>PostService()}>Create</button>
+          <br />
+        <button className="Exit-service" onClick={()=>setdivPost(!openDivPost)}>Exit</button>
+
+        
     </div>
 }
         <Swiper

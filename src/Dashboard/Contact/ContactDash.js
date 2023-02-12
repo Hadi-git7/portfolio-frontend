@@ -7,6 +7,11 @@ import "./ContactDash.css";
 function ContactDash() {
   const form = useRef();
   const [Contact, setContact] = useState([]);
+  const [OpenEdit,setEditContact] = useState(false);
+  const [EditAdress,setEditAdress] = useState(Contact[0]?.adress);
+  const [EditLinkedin,setEditLinkedin] = useState(Contact[0]?.linkedin);
+  const [EditEmail,setEditEmail]=useState(Contact[0]?.email)
+  const [EditWhatsapp,setEditWhatsapp] = useState(Contact[0]?.whatsapp)
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -29,27 +34,82 @@ function ContactDash() {
       );
     e.target.reset();
   };
+  const fetchContact = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/api/contact");
+      const result = await response.data;
+      setContact(result);
+      console.log(result);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const EditContactForm = async () => {
+    const form = {
+      "adress":EditAdress,
+      "linkedin":EditLinkedin,
+      "email":EditEmail,
+      "whatsapp":EditWhatsapp
+    }
+    try{
+      const response = await axios.put(`http://localhost:5000/api/contact/${Contact[0]?._id}`,form,
+      {
+        content : "application/json",
+        headers: {
+            "Authorization" : 'Bearer ' + localStorage.getItem('token')
+        }
+       });
+       const res = await response.data;
+       console.log(res);
+       fetchContact()
+    }catch(err){
+      console.log(err);
+    }
+  }
   useEffect(() => {
-    const fetchContact = async () => {
-      try {
-        const response = await axios.get("/api/contact");
-        const result = await response.data;
-        setContact(result);
-        console.log(result);
-      } catch (err) {
-        console.log(err);
-      }
-    };
     fetchContact();
   }, []);
 
   return (
     <div className="contact-dash" id="contact">
+        <button className="Edit-contact-button" onClick={()=>setEditContact(!OpenEdit)}>Edit Contact</button>
+      {OpenEdit &&
+      <div>
+        <label className="Contact-label">Please Update Address Link  
+          <br />
+      <input className="Contact-inputt"  onChange={(e)=>{setEditAdress(e.target.value)}} defaultValue={Contact[0]?.adress}/>
+      </label>
+      <br />
+      <label className="Contact-label">Please Update Email Link 
+      <br />
+      <input className="Contact-inputt"  onChange={(e)=>{setEditEmail(e.target.value)}} defaultValue={Contact[0]?.email}/>
+      </label>
+      <br />
+      <label className="Contact-label">Please Update Linkedin Link 
+      <br />
+      <input  className="Contact-inputt" onChange={(e)=>{setEditLinkedin(e.target.value)}} defaultValue={Contact[0]?.linkedin}/>
+      </label>
+      <br />
+      <label className="Contact-label">Please Update Whatsapp Link 
+      <br />
+      <input  className="Contact-inputt" onChange={(e)=>{setEditWhatsapp(e.target.value)}} defaultValue={Contact[0]?.whatsapp}/>
+      </label>
+      <br />
+       <button className="Contact-submit" onClick={()=>EditContactForm()}>Update</button>
+       <br />
+       <button className="Exit-Contact" onClick={()=>setEditContact(!OpenEdit)}>Exit</button>
+
+      </div>
+      }
+          
+
       <div className="whatsapp-btn-container-dash">
+        
         <a className="whatsapp-btn-dash" href={Contact[0]?.whatsapp}>
           <i className="fa-brands fa-whatsapp-dash"></i>
         </a>
-        <span>Contact Us</span>
+        <span>Contact Us </span>
       </div>
 
       <div className="cont-contact-dash">
@@ -63,7 +123,7 @@ function ContactDash() {
             <div className="socials-icons-dash icon-dash">
               <i className="fa-sharp fa-solid fa-location-dot"></i>
               <a href={Contact[0]?.adress}>
-                <h5 className="h5-dash">Adress</h5>
+                <h5 className="h5-dash">Address</h5>
               </a>
             </div>
 
@@ -80,7 +140,7 @@ function ContactDash() {
                 target="_blank"
                 rel="noreferrer"
                 href={Contact[0]?.linkedin}>
-                <h5 className="h5-dash">linkedin</h5>
+                <h5 className="h5-dash">Linkedin</h5>
               </a>
             </div>
           </div>

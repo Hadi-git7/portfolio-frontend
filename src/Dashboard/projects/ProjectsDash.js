@@ -85,10 +85,13 @@ function ProjectsDash() {
     <>
 
       <div className="project-main-dash" id="projects">
-      <button className="Create-newProject" onClick={()=>setdivPost(true)}>Create new Project</button>
+      <button className="Create-newProject" onClick={()=>setdivPost(!openDivPost)}>Create new Project</button>
     {openDivPost &&
     <div>
-        <input type="file" className="Choose-project-image" onChange={(e)=>{setImage(e.target.files[0])}}/>
+      <label className="Project-label-image" htmlFor="Project-label-image">Image
+        <br />
+        <input id="Project-label-image" type="file" className="Choose-project-image" onChange={(e)=>{setImage(e.target.files[0])}}/>
+        </label>
         <br />
         <label className="Project-label" htmlFor='Project-title'>Please Provide Project title 
         <br />
@@ -100,7 +103,10 @@ function ProjectsDash() {
         <input className="Project-description-input" id="Project-description" type="text"onChange={(e)=>{setDescription(e.target.value)}}/>
         </label>
         <br />
-        <button className="Project-submit-button" onClick={()=>PostProject()}>submit</button>
+        <button className="Project-submit-button" onClick={()=>PostProject()}>Submit</button>
+        <br />
+        <button className="Exit-project" onClick={()=>setdivPost(!openDivPost)}>Exit</button>
+
     </div>
 }
         <h1 className="project-title-dash">Projects</h1>

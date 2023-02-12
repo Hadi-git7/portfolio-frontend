@@ -84,15 +84,21 @@ function Slider() {
     <>
  <button onClick={()=>setdivPost(true)} className='AddSlide'>Create new Image</button>
     {openDivPost &&
-    <div>
-        <input type="file" className="Choose-slider-image" onChange={(e)=>{setImage(e.target.files[0])}}/>
+    <div className="Slider-opendiv">
+      <label htmlFor="slider-input-image" className="Image-slider-label"> Image
+      <br />
+        <input id="slider-input-image" type="file" className="Choose-slider-image" onChange={(e)=>{setImage(e.target.files[0])}}/>
+        </label>
         <br />
         <label htmlFor='Slider-title' className="Slider-label">Please provide image title
         <br />
         <input 
        id="Slider-title" placeholder="Image title" className="Slider-title-input" type="text"onChange={(e)=>{setTitle(e.target.value)}}/>
         </label>
-        <button onClick={()=>PostImage()} className='Submit-button'>submit</button>
+        <br />
+        <button onClick={()=>PostImage()} className='Submit-button'>Submit</button>
+        <br />
+        <button onClick={()=>setdivPost(!openDivPost)} className='Exit-slider'>Exit</button>
     </div>
 }
       <div className="main-slideshow-dash">

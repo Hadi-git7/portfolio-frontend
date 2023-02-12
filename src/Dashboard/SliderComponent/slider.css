@@ -59,7 +59,7 @@
 
   .Slider-label{
     color: #0066FF;
-    
+    font-size: 20px;
   }
 
   .Slider-title-input{
@@ -76,4 +76,22 @@
     width: 80px;
     height: 25px;
     font-size: 18px;
+    margin-top: 10px;
+  }
+
+.Exit-slider{
+  width: 80px;
+  height: 25px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+  .Slider-opendiv{
+    background-color: black;
+    width: 300px;
+  }
+
+  .Image-slider-label{
+    color: #0066FF;
+    font-size: 20px;
   }

@@ -51,6 +51,10 @@ function AboutDash() {
     <div className="Edit-about">
       <img src={`http://localhost:5000/${about[0]?.image}`} alt='About-title' style={{width:"50px"}}/>
       <br/>
+      <button className="Exit-about" onClick={()=>{setopenEdit(!openEdit)}}>
+       ❌
+        </button>
+        <br />
         <input className="Choose-about-image" onChange={(e)=>{setimage(e.target.files[0])}} type="file"/>
         <br/>
         <label className="About-label" htmlFor='About-title'>Please provide About title
@@ -63,7 +67,7 @@ function AboutDash() {
         <input className="About-description-input" defaultValue={about[0]?.text} id='About-description' onChange={(e)=>{settext(e.target.value)}}/>
         </label>
        <br />
-        <button className="About-submit-button" onClick={()=>{EditAbout()}}>submit</button>
+        <button className="About-submit-button" onClick={()=>{EditAbout()}}>Update</button>
     </div>
     }   
     

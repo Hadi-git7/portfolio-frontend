@@ -47,9 +47,15 @@
     font-size: 20px;
     }
 
-.Service-description-input,.Service-title-input{
-  width: 200px;
+.Service-title-input{
+  width: 20vw;
   height: 25px;
+  margin-top: 10px;
+}
+
+.Service-description-input{
+  width: 30vw;
+  height: 200px;
   margin-top: 10px;
 }
 
@@ -71,7 +77,16 @@ height: 30px;
 font-size: 20px;
 }
 
+.Exit-service{
+  width: 80px;
+  height: 25px;
+  font-size: 18px;
+  margin-top: 10px;
+}
 
+.Service-labell{
+  font-size: 20px;
+}
     @media(max-width:1000px){
       .Service-main-dash{
         margin-top: 50px;

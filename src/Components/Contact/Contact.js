@@ -63,7 +63,7 @@ function Contact() {
             <div className="socials-icons icon">
               <i class="fa-sharp fa-solid fa-location-dot"></i>
               <a href={Contact[0]?.adress}>
-                <h5>Adress</h5>
+                <h5>Address</h5>
               </a>
             </div>
 
@@ -80,7 +80,7 @@ function Contact() {
                 target="_blank"
                 rel="noreferrer"
                 href={Contact[0]?.linkedin}>
-                <h5>linkedin</h5>
+                <h5>Linkedin</h5>
               </a>
             </div>
           </div>

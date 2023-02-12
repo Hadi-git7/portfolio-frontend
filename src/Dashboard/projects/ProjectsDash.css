@@ -125,11 +125,18 @@
 
   .Project-label{
     color: #0066FF;
+    font-size: 20px;
   }
 
-  .Project-title-input,.Project-description-input{
-    width: 200px;
+  .Project-title-input{
+    width: 20vw;
     height: 25px;
+    margin-top: 10px;
+  }
+
+  .Project-description-input{
+    width: 30vw;
+    height: 200px;
     margin-top: 10px;
   }
 
@@ -154,6 +161,18 @@
     width: 100px;
     height: 30px;
     font-size: 17px;
+    margin-top: 10px;
+  }
+
+  .Exit-project{
+    width: 80px;
+    height: 25px;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .Project-label-image{
+    font-size: 20px;
   }
 
 /*---------------------------------------------------------------------------------------------*/
