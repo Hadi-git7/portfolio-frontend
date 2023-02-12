@@ -1,19 +1,20 @@
 import "./App.css";
-import Navbar from "./Components/Navbar/Navbar";
-import About from "./Components/About/About";
-import Projects from "./Components/Projects/Projects";
-import Slideshow from "./Components/Slideshow/Slideshow";
-import Services from "./Components/Services/Services";
-import Contact from "./Components/Contact/Contact";
+
+import Dashboard from "./Dashboard/dashboard/dashboard";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import User from "./User/user";
+
+
 function App() {
   return (
     <div>
-      <Navbar />
-      <Slideshow />
-      <About />
-      <Projects />
-      <Services />
-      <Contact />
+  <BrowserRouter>
+    <Routes>
+    <Route path="/" element={<User />} />
+      <Route path="/dash" element={<Dashboard />} />
+    </Routes>
+  </BrowserRouter>
     </div>
   );
 }
