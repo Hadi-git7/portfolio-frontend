@@ -6,7 +6,6 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import User from "./User/user";
 
-
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(
     window.localStorage.getItem("loggedIn")

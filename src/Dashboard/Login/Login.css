@@ -1,32 +1,42 @@
 .loginMain {
   width: auto;
-  text-align: center;
-  justify-content: center;
   display: flex;
+  justify-content: center;
+
   padding-top: 90px;
   padding-bottom: 90px;
   background-color: #e1e3eb;
 }
 
-.inputArea{
+/* .inputArea {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  margin: auto;
+  padding-right: auto;
+  padding-left: auto;
+  margin-left: auto;
+  margin-right: auto;
+} */
+@media (max-width: 600px) {
+  .inputArea {
+    width: auto;
+  }
 }
-.login-form{
-width: auto;
-margin: 0;
-}
-.loginSubMain {
 
+.loginForm {
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 550px;
-  margin-right: 100px;
-  width: 1500px ;
+  width: auto;
+  padding-left: 175px;
+}
+
+.loginSubMain {
+  display: flex;
+  justify-content: center;
+  height: 450px;
+  width: 600px;
   box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);
   padding-top: 30px;
   border-radius: 60px;
@@ -34,9 +44,8 @@ margin: 0;
 }
 
 .loginImgs {
-  padding-top: 20px;
-  justify-content: center;
   display: flex;
+  justify-content: center;
 }
 
 .loginContainerImage {
@@ -49,10 +58,18 @@ margin: 0;
   width: 115px;
 }
 
-.loginProfile {
+/* .loginProfile {
+  display: flex;
+  justify-content: center;
   height: 100px;
   width: 100px;
   border-radius: 130px;
+} */
+
+.loginPage h1 {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 input .loginName {
@@ -101,4 +118,3 @@ input .loginName {
 a {
   color: blue;
 }
-

@@ -1,5 +1,5 @@
-import React from "react"
-import { Route, Navigate } from "react-router-dom"
+import React from "react";
+import { Route, Navigate } from "react-router-dom";
 
 function AdminRoute({ isAuth, component: Component, ...rest }) {
   return (
@@ -9,10 +9,14 @@ function AdminRoute({ isAuth, component: Component, ...rest }) {
         if (isAuth) {
           return <Component />;
         } else {
-          return (<Navigate to={{ pathname: '/admin', state: { from: props.location } }} />
+          return (
+            <Navigate
+              to={{ pathname: "/admin", state: { from: props.location } }}
+            />
           );
         }
       }}
-    />)
+    />
+  );
 }
 export default AdminRoute;

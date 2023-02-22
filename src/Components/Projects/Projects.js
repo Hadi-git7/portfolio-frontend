@@ -50,7 +50,8 @@ function Projects() {
                       href={project.description}
                       target="_blank"
                       rel="noreferrer"
-                      className="text">
+                      className="text"
+                    >
                       {project.description}
                     </a>
                     <span> {project.title}</span>
@@ -66,7 +67,8 @@ function Projects() {
               showMoreItems();
               setclicked(!clicked);
               console.log(visible);
-            }}>
+            }}
+          >
             {!clicked ? "Show More" : "Show Less"}
           </button>
         </div>

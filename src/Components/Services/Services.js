@@ -47,7 +47,8 @@ function Services() {
           }}
           pagination={true}
           modules={[EffectCoverflow, Pagination]}
-          className="ServiceSwiper">
+          className="ServiceSwiper"
+        >
           {Service?.map((obj) => {
             return (
               <SwiperSlide key={obj._id} className="ServiceSlide">
